@@ -29,6 +29,26 @@ The game leverages the privacy and scalability features of MINA zkApps to ensure
 - Collaborate or compete with fellow players on the journey to follow the zkRabbit together.
 - Experience a progressive difficulty curve, with each zone demanding more complex cryptographic proofs.
 
+## Team-Based Gameplay and Collaboration
+
+In "Follow the zkRabbit," collaboration is the key to unlocking the mysteries of the virtual world. Players are encouraged to form teams with a balanced set of characters, each possessing unique skills and abilities. The success of a team depends on strategic planning and cooperation as they traverse the in-game zones and solve cryptographic puzzles.
+
+### Cooperative Cryptographic Puzzles
+
+Certain zones in the game present complex cryptographic puzzles that require the combined skills of multiple team members to solve. Each team member contributes their expertise, and together, they tackle these challenges with unity and determination.
+
+### Team Progression and Decision-Making
+
+Team progress is tracked collectively, and each team member shares in the rewards earned from solving puzzles and completing zones. As players progress, they must strategize and decide which characters and their respective skills to use in each zone.
+
+### Limited Resource Allocation
+
+To enhance the tactical aspect of the game, players must allocate their characters optimally based on the needs of the current task. Once a character is allocated elsewhere, they cannot be used to solve the current puzzle, requiring players to devise alternative solutions.
+
+### Dynamic Collaboration and Communication
+
+Collaboration and communication within teams are essential for success. "Follow the zkRabbit" incorporates features that facilitate team communication, such as team-specific chat channels or voice communication options, enabling players to strategize effectively.
+
 ## Zero-Knowledge Proofs (ZKPs) - A Unique Edge
 Follow the zkRabbit stands out as a cutting-edge blockchain game by integrating zero-knowledge proofs (ZKPs) into its core mechanics. ZKPs offer the following unique advantages to the gaming experience:
 

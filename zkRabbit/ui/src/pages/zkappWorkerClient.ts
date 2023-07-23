@@ -4,7 +4,7 @@ import type {
   ZkappWorkerRequest,
   ZkappWorkerReponse,
   WorkerFunctions,
-} from './zkappWorker';
+} from './zkappWorker.js';
 
 export default class ZkappWorkerClient {
   // ---------------------------------------------------------------------------------------
@@ -38,14 +38,14 @@ export default class ZkappWorkerClient {
     });
   }
 
-  async getNum(): Promise<Field> {
-    const result = await this._call('getNum', {});
+  async getField(): Promise<Field> {
+    const result = await this._call('getField', {});
     return Field.fromJSON(JSON.parse(result as string));
   }
 
-  createUpdateTransaction() {
-    return this._call('createUpdateTransaction', {});
-  }
+  // createUpdateTransaction() {
+  //   return this._call('createUpdateTransaction', {});
+  // }
 
   proveUpdateTransaction() {
     return this._call('proveUpdateTransaction', {});

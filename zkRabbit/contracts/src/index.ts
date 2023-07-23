@@ -1,3 +1,4 @@
+import { Rabbit } from './Rabbit';
 import { zkRabbit } from './zkRabbit';
 
-export { zkRabbit };
+export { Rabbit, zkRabbit };

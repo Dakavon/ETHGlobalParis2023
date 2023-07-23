@@ -21,7 +21,7 @@ export class Rabbit extends SmartContract {
   @method move(nextField: Field){
     const currentField = this.field.getAndAssertEquals();
 
-    //Assertions
+    //Restrict staying on the same field
     currentField.assertNotEquals(nextField);
     //Field borders (only x-axis, y=0)
     nextField.assertGreaterThanOrEqual(0);
@@ -30,16 +30,7 @@ export class Rabbit extends SmartContract {
     //If-else-statement
     this.gameEnded.set(Circuit.if(currentField.equals(Field(4)), Bool(true), Bool(false)));
 
-    // Circuit.if(currentField.equals(Field(4)),
-    //   ,
-    //   this.gameEnded.set(Bool(true)),
-    //   this.gameEnded.set(Bool(false))
-    // );
-
-    // if (currentField.equals(Field(4))) {
-    //   this.gameEnded.set(Bool(true));
-    // }
-
+    //Save this round
     this.field.set(nextField);
   }
 }

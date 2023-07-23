@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "deployAliases": {
+    "berkeley": {
+      "url": "https://proxy.berkeley.minaexplorer.com/graphql",
+      "keyPath": "keys/berkeley.json",
+      "feepayerKeyPath": "/home/vagrant/.cache/zkapp-cli/keys/ethglobalparis2023_1.json",
+      "feepayerAlias": "ethglobalparis2023_1",
+      "fee": "0.1",
+      "smartContract": "Rabbit"
+    }
+  }
+}

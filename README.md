@@ -4,6 +4,8 @@ Follow the zkRabbit is an innovative and decentralized social adventure game bui
 
 ![General overview](images/followthezkrabbit.png)
 
+See also our [Google Slides](https://docs.google.com/presentation/d/17h_LMBcVTxv0uB93c_6HiZMmviJQTz3vo4QgdIvPq-Y/edit?usp=sharing)!
+
 ## Table of Contents
 
 - [Follow the zkRabbit - A Blockchain Game powered by MINA zkApps](#follow-the-zkrabbit---a-blockchain-game-powered-by-mina-zkapps)

@@ -4,11 +4,11 @@ type Transaction = Awaited<ReturnType<typeof Mina.transaction>>;
 
 // ---------------------------------------------------------------------------------------
 
-import type { Add } from '../../../contracts/src/Add';
+import type { Rabbit } from '../../../contracts/src/Rabbit';
 
 const state = {
-  Add: null as null | typeof Add,
-  zkapp: null as null | Add,
+  Rabbit: null as null | typeof Rabbit,
+  zkapp: null as null | Rabbit,
   transaction: null as null | Transaction,
 };
 
@@ -23,11 +23,11 @@ const functions = {
     Mina.setActiveInstance(Berkeley);
   },
   loadContract: async (args: {}) => {
-    const { Add } = await import('../../../contracts/build/src/Add.js');
-    state.Add = Add;
+    const { Rabbit } = await import('../../../contracts/build/src/Rabbit.js');
+    state.Rabbit = Rabbit;
   },
   compileContract: async (args: {}) => {
-    await state.Add!.compile();
+    await state.Rabbit!.compile();
   },
   fetchAccount: async (args: { publicKey58: string }) => {
     const publicKey = PublicKey.fromBase58(args.publicKey58);
@@ -35,18 +35,18 @@ const functions = {
   },
   initZkappInstance: async (args: { publicKey58: string }) => {
     const publicKey = PublicKey.fromBase58(args.publicKey58);
-    state.zkapp = new state.Add!(publicKey);
+    state.zkapp = new state.Rabbit!(publicKey);
   },
-  getNum: async (args: {}) => {
-    const currentNum = await state.zkapp!.num.get();
-    return JSON.stringify(currentNum.toJSON());
+  getField: async (args: {}) => {
+    const currentField = await state.zkapp!.field.get();
+    return JSON.stringify(currentField.toJSON());
   },
-  createUpdateTransaction: async (args: {}) => {
-    const transaction = await Mina.transaction(() => {
-      state.zkapp!.update();
-    });
-    state.transaction = transaction;
-  },
+  // createUpdateTransaction: async (args: {}) => {
+  //   const transaction = await Mina.transaction(() => {
+  //     state.zkapp!.update();
+  //   });
+  //   state.transaction = transaction;
+  // },
   proveUpdateTransaction: async (args: {}) => {
     await state.transaction!.prove();
   },
